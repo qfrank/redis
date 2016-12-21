@@ -40,8 +40,6 @@ RUN set -ex \
 	&& make -C /usr/src/redis \
 	&& make -C /usr/src/redis install \
 	\
-	&& rm -r /usr/src/redis \
-	\
 	&& apk del .build-deps
 
 RUN mkdir /data && chown redis:redis /data
